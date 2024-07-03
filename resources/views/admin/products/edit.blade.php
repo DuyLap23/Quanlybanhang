@@ -91,7 +91,7 @@
                                         @foreach ($properties as $key => $property)
                                             <div class="col-md-2">
                                                 <div class="form-check form-switch form-switch-success">
-                                                    <input class="form-check-input" type="checkbox" id="{{ $property }}"
+                                                    <input class="form-check-input" type="checkbox" id="{{ $property }}" value="1"
                                                            name="{{ $property }}"
                                                         {{ $product->{$property} ? 'checked' : '' }}>
                                                     <label class="form-check-label" for="{{ $property }}">{{ $key }}</label>

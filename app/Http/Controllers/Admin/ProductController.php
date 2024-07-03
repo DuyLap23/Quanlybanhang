@@ -188,7 +188,7 @@ class ProductController extends Controller
             $dataProductVariants[] = [
                 'product_size_id' => $tmp[0],
                 'product_color_id' => $tmp[1],
-                'quantity' => $value['quantity'],
+                'quantity' => $value['quantity'] ?? 0,
                 'image' => $value['image'] ?? null,
             ];
         }
@@ -198,7 +198,7 @@ class ProductController extends Controller
 
         try {
             DB::beginTransaction();
-            $product = Product:: findOrFail($product->id);
+            $product = Product::findOrFail($product->id);
             $product->update($dataProduct);
 
             // Lấy các biến thể hiện có và gán key dựa trên product_size_id và product_color_id

@@ -54,6 +54,7 @@
                                 <th>Is Active</th>
                                 <th>Is Hot Deal</th>
                                 <th>Is Good Deal</th>
+                                <th>Is New</th>
                                 <th>Is Show Home</th>
                                 <th>Tag</th>
                                 <th>Create at</th>
@@ -95,6 +96,9 @@
                                         ? '<span class="badge bg-success"> Yes</span>'
                                         : '<span class="badge bg-danger"> No</span>' !!}</td>
                                     <td>{!! $product->is_good_deal
+                                        ? '<span class="badge bg-success"> Yes</span>'
+                                        : '<span class="badge bg-danger"> No</span>' !!}</td>
+                                    <td>{!! $product->is_new
                                         ? '<span class="badge bg-success"> Yes</span>'
                                         : '<span class="badge bg-danger"> No</span>' !!}</td>
                                     <td>{!! $product->is_show_home
