@@ -14,22 +14,21 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(\App\Models\User::class)->constrained();
-            $table->foreignIdFor(\App\Models\ProductVariant::class)->constrained();
 
-            $table ->string('name');
-            $table ->string('email');
-            $table ->string('phone');
-            $table ->string('address');
-            $table ->string('note');
+            $table ->string('user_name');
+            $table ->string('user_email');
+            $table ->string('user_phone');
+            $table ->string('user_address');
+            $table ->string('user_note');
 
             $table ->boolean('is_ship_user_same_user')->default(true);
 
 
-            $table ->string('name')->nullable();
-            $table ->string('email')->nullable();
-            $table ->string('phone')->nullable();
-            $table ->string('address')->nullable();
-            $table ->string('note')->nullable();
+            $table ->string('ship_user_name')->nullable();
+            $table ->string('ship_user_email')->nullable();
+            $table ->string('ship_user_phone')->nullable();
+            $table ->string('ship_user_address')->nullable();
+            $table ->string('ship_user_note')->nullable();
 
 
             $table ->string('status_order')->default(\App\Models\Order::STATUS_ORDER_PENDING);

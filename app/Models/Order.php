@@ -28,4 +28,22 @@ class Order extends Model
     const STATUS_ORDER_CANCEL = 'cancel';
     const STARTUS_PAYMENT_UNPAID = 'unpaid';
     const STARTUS_PAYMENT_PAID = 'paid';
+
+    protected $fillable = [
+        'user_id',
+        'user_name',
+        'user_email',
+        'user_phone',
+        'user_address',
+        'user_note',
+        'is_ship_user_same_user',
+        'ship_user_name',
+        'ship_user_email',
+        'ship_user_phone',
+        'ship_user_address',
+        'ship_user_note',
+        'status_order',
+        'status_payment',
+        'total_price',
+    ];
 }

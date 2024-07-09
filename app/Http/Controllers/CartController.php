@@ -8,15 +8,21 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
+    public function listCart(Request $request)
+    {
+        $cart = session('cart');
+        // dd($cart);
+        $totalAmount  = 0;
+        foreach ($cart as $value) {
+            $totalAmount += $value['quantities'] * ($value['price_sale'] ?: $value['price_regular']);
+        }
 
-    public function listCart(Request $request){
-       return view('client.cart.cart');
+        return view('client.cart.cart',compact('totalAmount'));
     }
     // public function miniCart(Request $request){
     //    return view('client.cart.miniCart');
     // }
 
-    
     public function add()
     {
         $product = Product::query()->findOrFail(\request('product_id'));

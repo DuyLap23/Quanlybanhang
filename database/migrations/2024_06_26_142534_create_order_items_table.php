@@ -16,14 +16,14 @@ return new class extends Migration
             $table->foreignIdFor(\App\Models\Order::class)->constrained();
             $table->foreignIdFor(\App\Models\ProductVariant::class)->constrained();
 
-            $table->unsignedInteger('quantity')->default(0);
+            $table->unsignedInteger('product_quantity')->default(0);
 
 //            Sao lưu thông tin sản phẩm
-            $table->string('name')  ;
-            $table->string('sku')->nullable();
-            $table->string('img_thumbnail')->nullable();
-            $table->double('price_regular');
-            $table->double('price_sale')->nullable();
+            $table->string('product_name')  ;
+            $table->string('product_sku')->nullable();
+            $table->string('product_img_thumbnail')->nullable();
+            $table->double('product_price_regular');
+            $table->double('product_price_sale')->nullable();
 
 //            Sao lưu thông tin biến thể
             $table->string('variant_size_name')->nullable();
