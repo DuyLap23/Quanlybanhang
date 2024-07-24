@@ -33,7 +33,7 @@ class Product extends Model
         'is_new' => 'boolean',
         'is_show_home' => 'boolean',
     ];
-    
+
     public function catelogue(){
         return $this->belongsTo(Catelogue::class);
     }
@@ -42,10 +42,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class) ;
     }
-    public function galleries()
-    {
-        return $this->hasMany(ProductGallery::class);
-    }
+        public function galleries()
+        {
+            return $this->hasMany(ProductGallery::class);
+        }
 
     public function variants()
     {

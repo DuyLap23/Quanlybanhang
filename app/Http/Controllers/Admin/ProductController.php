@@ -83,7 +83,7 @@ class ProductController extends Controller
         }
 
         $dataProductTags = $request->tags;
-        $dataProductGalleries = $request->file('product_galleries') ?: [];
+        $dataProductGalleries = $request->file('produclert_galies') ?: [];
 
         try {
             DB::beginTransaction();

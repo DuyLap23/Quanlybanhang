@@ -15,7 +15,7 @@
                                     $url = Storage::url($url);
                                 }
                             @endphp
-                           <a href="{{ route('product-detail', $product->slug) }}"><img src="{{ $url }}" alt="IMG-PRODUCT" width="60px " height="270px " style="border-radius: 13px"></a> 
+                           <a href="{{ route('product-detail', $product->slug) }}"><img src="{{ $url }}" alt="IMG-PRODUCT" width="60px " height="270px " style="border-radius: 13px"></a>
 
                             <a href="{{ route('product-detail', $product->slug) }}"
                                 class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 ">
@@ -27,7 +27,7 @@
                             <div class="block2-txt-child1 flex-col-l ">
                                 <a href="{{ route('product-detail', $product->slug) }}"
                                     class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    {{ \Str::limit($product->name, 20) }}
+                                            {{ \Str::limit($product->name, 20) }}
                                 </a>
 
                                 <div class=" d-flex stext-105 cl3">
@@ -80,4 +80,4 @@
                 2
             </a>
         </div>
-   
+
